@@ -5,7 +5,7 @@ let str = `
           <br>
           `;
 let wenan = [
-  `<br>愿有人陪你颠沛流离，如果没有，
+  `<br>愿有人陪你颠沛流离
   <br><br>
   愿你成为自己的太阳。<br>`,
 
@@ -30,6 +30,7 @@ let wenan = [
 
 let time1 = 20;
 const btn = document.querySelector('.my_btn');
+
 btn.addEventListener('click', function () {
   // 渲染文字
   myRender();
@@ -64,7 +65,7 @@ function myRender() {
   <br>
   <br>
   `
-  if (name === "王雪莹") {
+  if (name === "唐雯煜") {
     let lvstr1 = `
     能收下吗？
     <br>
@@ -86,16 +87,18 @@ function myRender() {
   } else {
     let s1 = `
     <br>
-    岁未将至 平安喜乐 愿亲在 2024万事如意🧨
+    岁未将至 平安喜乐 愿亲在 2025万事如意🧨
     <br>
     <br>唯愿烟花像星辰 祝你所愿皆成真🧨
     <br>
     `
     str += s1;
   }
-  let ran = Math.floor(Math.random() * 6);//随机数
+  let ran = Math.floor(Math.random() * 4);//随机数
+  console.log(ran, wenan , 'jljljljlj')
   let ss = wenan[ran];//随机文案
   str = ss + str;
+  console.log(ss, 'sss');
   str = `${name}：<br>` + str;
   console.log(`${name}`);
   myText();
